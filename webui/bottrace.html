@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=en>
+ <head>
+  <title>fun-bots-webui</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="wrapper">
+<div class="content">
+     <h2 style="text-align:center">FUN BOTS</h2>
+      <h3 style="text-align:center">Bot Path Making</h3>
+  <p>F5 - Start Bot Trace<br>
+  F6 - Finish Bot Trace<br>
+  F7 - Clear Last Trace<br>
+  F8 - Clear All Traces<br>
+  F9 - Save Paths To Database</p>
+  <br>
+  <p>Click <strong>Info</strong> for some help regarding bot pathing.</p>
+  <input class="button_styled" type="button" value="Clear Trace No." onclick="spawnranbots()">
+  <input class="textinput_styled" type="text" id="cleartracenoid" value="1" name="cleartracenoid">
+  <input class="button_styled" type="button" value="Spawn on trace No." onclick="spawnranbots()">
+  <input class="textinput_styled" type="text" id="cleartracenoid" value="1" name="cleartracenoid"> 
+</div>
+<input class="button_styled1" type="button" value="Info" onclick="window.location.href='bottracehelp.html'; WebUI.Call('EnableKeyboard'); "><br>
+<input class="button_styled1" type="button" value="Main Menu" onclick="window.location.href='index.html'; WebUI.Call('EnableKeyboard'); "><br>
+<input class="button_styled1" type="button" value="Exit" onclick="WebUI.Call('Hide'); WebUI.Call('ResetKeyboard'); WebUI.Call('ResetMouse'); WebUI.Call('DispatchEventLocal', 'exitui')">
+</div>
+</body>
+</html>

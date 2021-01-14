@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang=en>
+ <head>
+  <title>fun-bots-webui</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="wrapper">
+<div class="content">
+     <h2 style="text-align:center">FUN BOTS!</h2>
+     <h5>Pathing Help</h5>
+<p>-To make a bot path use <strong>F5</strong>, this will begin tracing. Start walking/running around map, your path will be recorded. Switch to seccondary weapon to pause bot on your location and switch back to primary to continue trace.<br>
+-To finish bot path use <strong>F6</strong>, to end tracing</p>
+<p>-Use <strong>F7</strong> to clear previous path.</p>
+<p>-Using <strong>F8</strong> will clear all traces<p>
+<p>-To save the pathing you have done click <strong>F9</strong></p>
+<p>
+
+</div>
+<input class="button_styled1" type="button" value="Go Back" onclick="window.location.href='bottrace.html'; WebUI.Call('EnableKeyboard'); "><br>
+<input class="button_styled1" type="button" value="Main Menu" onclick="window.location.href='index.html'; WebUI.Call('EnableKeyboard'); "><br>
+<input class="button_styled1" type="button" value="Exit" onclick="WebUI.Call('Hide'); WebUI.Call('ResetKeyboard'); WebUI.Call('ResetMouse'); WebUI.Call('DispatchEventLocal', 'exitui')">
+</div>
+</body>
+</html>

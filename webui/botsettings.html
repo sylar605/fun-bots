@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang=en>
+ <head>
+  <title>fun-bots-webui</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="wrapper">
+<div class="content">
+  <SCRIPT>
+    function standbot() {
+      var x = document.getElementById("spawnstandbotid").value;
+        WebUI.Call('DispatchEventLocal', 'spawnstandbotvalue', x);
+    }
+    function crouchingbot() {
+      var x = document.getElementById("spawncrouchingbotid").value;
+        WebUI.Call('DispatchEventLocal', 'spawncrouchingbo', x);
+    }
+    function rowbot() {
+      var x = document.getElementById("spawnrowbotid").value;
+        WebUI.Call('DispatchEventLocal', 'spawnrowbot', x);
+    }
+    function towerbot() {
+      var x = document.getElementById("spawntowerbotid").value;
+        WebUI.Call('DispatchEventLocal', 'spawntowerbot', x);
+    }
+    </SCRIPT>
+  <h2>Bot Settings</h2>
+  <p>Some simple bot settings you can apply, for more advanced please read the "readme" file.</p>
+    <input class="button_styled" type="button" value="Butt Damage" onclick="msg()">
+    <input class="textinput_styled"  type="text" id="bulletdamageid" value="1-2" name="bulletdamage">
+    <input class="button_styled" type="button" value="Bullet Damage Sniper" onclick="msg()">
+    <input class="textinput_styled" type="text" id="bulletdamagesniperid" value="0-4" name="bulletdamagesniper">
+    <input class="button_styled" type="button" value="Melee Damage" onclick="msg()">
+    <input class="textinput_styled" type="text" id="meleedamageid" value="0-4" name="meleedamage">
+    <input class="button_styled" type="button" value="Bot Kit" onclick="msg()">
+    <input class="textinput_styled" type="text" id="fname1" value="0-4" name="fname1">
+    <input class="button_styled" type="button" value="Bot Color" onclick="msg()">
+    <input class="textinput_styled" type="text" id="fname1" value="0-4" name="fname1">
+    <input class="button_styled" type="button" value="Melee Attack" onclick="msg()">
+    <input class="button_styled" type="button" value="Shoot Back If Hit" onclick="msg()">
+</div>
+<input class="button_styled1" type="button" value="Bot Pathing" onclick="window.location.href='bottrace.html'; WebUI.Call('EnableKeyboard'); "><br>
+<input class="button_styled1" type="button" value="Main Menu" onclick="window.location.href='index.html'; WebUI.Call('EnableKeyboard'); "><br>
+<input class="button_styled1" type="button" value="Exit" onclick="WebUI.Call('Hide'); WebUI.Call('ResetKeyboard'); WebUI.Call('ResetMouse'); WebUI.Call('DispatchEventLocal', 'exitui')">
+</div>
+</body>
+</html>
