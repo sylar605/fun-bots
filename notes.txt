@@ -1,17 +1,24 @@
 bots do not have a player.name causing other mods to break
 --> what do you mean?
 
-bots are walking past enemy real players
---> there is a update-Cycle of up to 3 s with 30 Bots. There is no other Way around. If longer than 3s, its a Bug :-)
+Events:Subscribe("Player:TeamChange", function(player, team, squad)
+		if player == nil then
+		print("player has no name")
+		else
+        print("Welcome ".. player.name)
+		end
+    end)
 
-bot spawns need to be a little more random they tend to be bunched up
---> depends on the amount of bots and amount of paths available. Random = Random ;-)
+Events:Subscribe("Player:Killed", function(player, inflictor, position, weapon, isRoadKill, isHeadShot, wasVictimInReviveState, info)
+        if inflictor == nil then
+            print(player.name .. " was killed by magic")
+	else
+	print(inflictor.name .. " killed " .. player.name)
+        end
+end)
 
-seems like bots get lost when they wonder off to attack players they cant there way back to path.
---> should actually work. I will test if I can find out what happens
+i will get you and example.jpg
 
-bot kills dont add to scoreboard
---> not support by VU jet...
 
 Opinons:
 i need a team function please if not already so from ui can pick which team they spawn to.
@@ -21,4 +28,3 @@ i need a team function please if not already so from ui can pick which team they
     - without a Player (nil)
         Config.botTeam
 
-some how make bots follow path towards where the fight is (if players are shooting head towards)
